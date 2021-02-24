@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "3483ce8f-198b-47ae-a016-fab087f7dc1e",
+		"name": "apiBlog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/login?login&password",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": null
+						},
+						{
+							"key": "password",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/posts?title=5 пост&anons=Копия первого поста&text=Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat nunc nunc, at gravida justo malesuada sed.&tags=Первый пост, пост, информировани&image=https://lh3.googleusercontent.com/proxy/Rjf8SRyDpqz0retkLd8vxLM6tGVxk7fB0Rg-9j_iUN33zInW3vbgz3862wvfw9ffpoJO-9UxAWIMlfESJ9HQgNMl8Ak21HgTlJtT683sga83AgpndzX5mx6nMujV&token=b4a18e8db95bf2f32465c3d94b9f3ce2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "5 пост"
+						},
+						{
+							"key": "anons",
+							"value": "Копия первого поста"
+						},
+						{
+							"key": "text",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat nunc nunc, at gravida justo malesuada sed."
+						},
+						{
+							"key": "tags",
+							"value": "Первый пост, пост, информировани"
+						},
+						{
+							"key": "image",
+							"value": "https://lh3.googleusercontent.com/proxy/Rjf8SRyDpqz0retkLd8vxLM6tGVxk7fB0Rg-9j_iUN33zInW3vbgz3862wvfw9ffpoJO-9UxAWIMlfESJ9HQgNMl8Ak21HgTlJtT683sga83AgpndzX5mx6nMujV"
+						},
+						{
+							"key": "token",
+							"value": "b4a18e8db95bf2f32465c3d94b9f3ce2",
+							"description": "токен пользователя"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/posts/1/?title=Изменение первого поста&anons=Другой анонс&text=Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat nunc nunc, at gravida justo malesuada sed.&tags=Другой тег поста&image=https://lh3.googleusercontent.com/proxy/Rjf8SRyDpqz0retkLd8vxLM6tGVxk7fB0Rg-9j_iUN33zInW3vbgz3862wvfw9ffpoJO-9UxAWIMlfESJ9HQgNMl8Ak21HgTlJtT683sga83AgpndzX5mx6nMujV&token=b4a18e8db95bf2f32465c3d94b9f3ce2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Изменение первого поста"
+						},
+						{
+							"key": "anons",
+							"value": "Другой анонс"
+						},
+						{
+							"key": "text",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat nunc nunc, at gravida justo malesuada sed."
+						},
+						{
+							"key": "tags",
+							"value": "Другой тег поста"
+						},
+						{
+							"key": "image",
+							"value": "https://lh3.googleusercontent.com/proxy/Rjf8SRyDpqz0retkLd8vxLM6tGVxk7fB0Rg-9j_iUN33zInW3vbgz3862wvfw9ffpoJO-9UxAWIMlfESJ9HQgNMl8Ak21HgTlJtT683sga83AgpndzX5mx6nMujV"
+						},
+						{
+							"key": "token",
+							"value": "b4a18e8db95bf2f32465c3d94b9f3ce2",
+							"description": "токен пользователя"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePost",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/posts/7/?token",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"7",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "findPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/posts/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "commentlocalhost:8000/api/posts/1/comments",
+					"host": [
+						"commentlocalhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteComment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/posts/1/comments/1/?token=b4a18e8db95bf2f32465c3d94b9f3ce2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1",
+						"comments",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "b4a18e8db95bf2f32465c3d94b9f3ce2",
+							"description": "токен пользователя"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findTag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/posts/tag/Пост",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"tag",
+						"Пост"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
